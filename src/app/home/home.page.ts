@@ -18,7 +18,7 @@ export class HomePage implements OnInit {
     this.navCtrl.navigateForward('/login');
   }
 
-  onSignIn() {
+  onSignUp() {
     console.log('Sign up');
     this.navCtrl.navigateForward('/signup');
   }

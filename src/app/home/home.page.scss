@@ -1,31 +1,3 @@
-#container {
-  text-align: center;
-  color: white;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-
 .image {
   margin-top: 50px;
   height: 200px;
@@ -36,12 +8,6 @@ ion-title.ios.title-default.hydrated {
   text-align: center;
 }
 
-ion-buttons {
-  display: block;
-}
-
 ion-button {
-  border-radius: 8px;
-  background-color: #178b8b;
   color: white;
 }
