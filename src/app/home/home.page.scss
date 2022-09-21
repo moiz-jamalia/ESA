@@ -1,6 +1,6 @@
 #container {
   text-align: center;
-
+  color: white;
   position: absolute;
   left: 0;
   right: 0;
@@ -24,4 +24,24 @@
 
 #container a {
   text-decoration: none;
+}
+
+.image {
+  margin-top: 50px;
+  height: 200px;
+  width: auto;
+}
+
+ion-title.ios.title-default.hydrated {
+  text-align: center;
+}
+
+ion-buttons {
+  display: block;
+}
+
+ion-button {
+  border-radius: 8px;
+  background-color: #178b8b;
+  color: white;
 }

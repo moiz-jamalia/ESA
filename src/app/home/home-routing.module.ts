@@ -6,7 +6,19 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
-  }
+    children: [
+      {
+        path: '',
+        redirectTo: '',
+        pathMatch: 'full',
+      },
+    ],
+  },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

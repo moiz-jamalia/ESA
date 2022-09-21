@@ -1,12 +1,28 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {NavController} from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
-  constructor() {}
+  constructor(private navCtrl: NavController) {}
+
+  ngOnInit() {
+  }
+
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  OnLogIn() {
+    console.log('Log in');
+    this.navCtrl.navigateForward('/login');
+  }
+
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  OnSignIn() {
+    console.log('Sign up');
+    this.navCtrl.navigateForward('/signup');
+  }
 
 }
