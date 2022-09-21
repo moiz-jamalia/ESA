@@ -13,14 +13,12 @@ export class HomePage implements OnInit {
   ngOnInit() {
   }
 
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  OnLogIn() {
+  onLogIn() {
     console.log('Log in');
     this.navCtrl.navigateForward('/login');
   }
 
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  OnSignIn() {
+  onSignIn() {
     console.log('Sign up');
     this.navCtrl.navigateForward('/signup');
   }
