@@ -1,8 +1,5 @@
-export class Werkvorschrift {
-  constructor(
-    public chapter: string,
-    public count: number,
-    public description: string
-  ) {
-  }
+export interface Werkvorschrift {
+  chapter: string;
+  count: number;
+  description: string;
 }
