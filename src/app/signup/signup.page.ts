@@ -7,6 +7,7 @@ import {NavController} from '@ionic/angular';
   styleUrls: ['./signup.page.scss'],
 })
 export class SignupPage implements OnInit {
+  maxDate: string = new Date().getDate().toString();
 
   constructor(private navCtrl: NavController) { }
 

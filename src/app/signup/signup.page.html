@@ -19,19 +19,12 @@
     </ion-item>
     <ion-item lines="full">
       <ion-label position="fixed">Birthday</ion-label>
-      <ion-datetime-button slot="end" datetime="date"></ion-datetime-button>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-datetime-button slot="end" datetime="date" required></ion-datetime-button>
       <ion-modal [keepContentsMounted]="true">
         <ng-template>
           <ion-datetime
             id="date"
+            [max]="maxDate"
             presentation="date"
             [preferWheel]="true"
             [showDefaultButtons]="true"
@@ -40,6 +33,14 @@
           </ion-datetime>
         </ng-template>
       </ion-modal>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" required></ion-input>
     </ion-item>
     <ion-row>
       <ion-col class="ion-text-center">
