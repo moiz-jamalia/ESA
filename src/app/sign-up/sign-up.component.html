@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home">Back</ion-back-button>
+      <ion-back-button (click)="onBackHome()">Back</ion-back-button>
     </ion-buttons>
     <ion-title>Sign Up</ion-title>
   </ion-toolbar>
@@ -24,7 +24,6 @@
         <ng-template>
           <ion-datetime
             id="date"
-            [max]="maxDate"
             presentation="date"
             [preferWheel]="true"
             [showDefaultButtons]="true"

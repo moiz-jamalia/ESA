@@ -1,5 +1,10 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { MainComponent } from './sign-in/main/main.component';
 
 const routes: Routes = [
   {
@@ -12,27 +17,39 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'login',
+    path: 'signIn',
     children: [
       {
         path:'',
-        loadChildren: () => import('./login/login.module').then((m) => m.LoginPageModule),
+        component: SignInComponent
       },
       {
-        path: 'login/main',
-        loadChildren: () => import('./login/main/main.module').then((m) => m.MainPageModule)
+        path: 'signIn/main',
+        component: MainComponent
       }
     ]
   },
   {
-    path: 'signup',
-    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+    path: 'signUp',
+    component: SignUpComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+  {
+    path: 'verify-email-address',
+    component: VerifyEmailComponent
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthPageModule)
   },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
   exports: [RouterModule]
 })
