@@ -19,12 +19,12 @@
     </ion-item>
     <ion-item lines="full">
       <ion-label position="fixed">Birthday</ion-label>
-      <ion-datetime-button slot="end" datetime="date" required></ion-datetime-button>
+      <ion-datetime-button slot="end" datetime="date-time"></ion-datetime-button>
       <ion-modal [keepContentsMounted]="true">
         <ng-template>
           <ion-datetime
-            id="date"
-            presentation="date"
+            id="date-time"
+            presentation="date-time"
             [preferWheel]="true"
             [showDefaultButtons]="true"
             doneText="All set"

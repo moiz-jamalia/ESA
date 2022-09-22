@@ -5,6 +5,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { MainComponent } from './sign-in/main/main.component';
+import { AuthGuard } from './shared/guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -40,10 +41,6 @@ const routes: Routes = [
   {
     path: 'verify-email-address',
     component: VerifyEmailComponent
-  },
-  {
-    path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthPageModule)
   },
 ];
 

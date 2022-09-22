@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {NavController} from '@ionic/angular';
+import { NavController } from '@ionic/angular';
+import { AuthService } from '../shared/services/auth.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -8,7 +9,7 @@ import {NavController} from '@ionic/angular';
 })
 export class SignInComponent implements OnInit {
 
-  constructor(private navCtrl: NavController) {}
+  constructor(public authService: AuthService, private navCtrl: NavController) {}
 
   ngOnInit() {}
 

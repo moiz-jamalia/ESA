@@ -82,10 +82,10 @@ export class AuthService {
       });
   }
 
-  getIsLoggedIn(): boolean {
+  get isLoggedIn(): boolean {
     // eslint-disable-next-line @typescript-eslint/no-shadow,@typescript-eslint/no-non-null-assertion
     const user = JSON.parse(localStorage.getItem('user')!);
-    return user !== null && user.emailVerified !== false;
+    return (user !== null && user.emailVerified !== false) ? true : false;
   }
   // Sign in with Google
   googleAuth() {
