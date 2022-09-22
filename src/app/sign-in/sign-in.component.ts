@@ -16,4 +16,8 @@ export class SignInComponent implements OnInit {
   onBackHome() {
     this.navCtrl.navigateBack('/home').then(r => '');
   }
+
+  onMain() {
+    this.navCtrl.navigateForward(['signIn/main']).then(r => '');
+  }
 }

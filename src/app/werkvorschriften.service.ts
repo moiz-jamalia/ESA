@@ -19,6 +19,7 @@ export class WerkvorschriftenService {
     {
      chapter: 'C1.2',
      count: 3,
+      // eslint-disable-next-line max-len
      description: 'Vorliegende Bestimmungen gelten als harmonisierte Ergänzungen im Verteilnetzgebiet der Mitglieder des Elektrizitätswerke-Verbandes St.Gallen-Appenzel und können durch diese übernommen, ergänzt oder geändert werden'
     }
   ];
@@ -29,4 +30,7 @@ export class WerkvorschriftenService {
 
   // eslint-disable-next-line @typescript-eslint/member-ordering
   constructor() {}
+}
+
+export class werkvorschriftService {
 }

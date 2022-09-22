@@ -18,13 +18,13 @@
       <ion-input type="text" required></ion-input>
     </ion-item>
     <ion-item lines="full">
-      <ion-label position="fixed">Birthday</ion-label>
-      <ion-datetime-button slot="end" datetime="date-time"></ion-datetime-button>
+      <ion-label position="floating">Birthday</ion-label>
+      <ion-datetime-button slot="end" datetime="date"></ion-datetime-button>
       <ion-modal [keepContentsMounted]="true">
         <ng-template>
           <ion-datetime
-            id="date-time"
-            presentation="date-time"
+            id="date"
+            presentation="date"
             [preferWheel]="true"
             [showDefaultButtons]="true"
             doneText="All set"

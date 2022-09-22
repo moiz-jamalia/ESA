@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button>
+      <ion-back-button (click)="onBackHome()"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -13,39 +13,39 @@
   <ion-grid>
     <ion-row>
       <ion-col class="ion-text-center">
-        <ion-select multiple="true" #werkschriftSelect placeholder="Werkvorschrift C1">
+        <ion-select multiple="true" placeholder="Werkvorschrift C1">
           <ion-select-option *ngFor="let wv of wvs" >{{wv.chapter}} {{wv.description}}</ion-select-option>
         </ion-select>
         <br><br>
-        <ion-select multiple="true" #werkschriftSelect placeholder="Werkvorschrift C3">
+        <ion-select multiple="true" placeholder="Werkvorschrift C3">
           <ion-select-option *ngFor="let wv of wvs" >{{wv.chapter}} {{wv.description}}</ion-select-option>
         </ion-select>
         <br><br>
-        <ion-select multiple="true" #werkschriftSelect placeholder="Werkvorschrift C4">
+        <ion-select multiple="true" placeholder="Werkvorschrift C4">
           <ion-select-option *ngFor="let wv of wvs" >{{wv.chapter}} {{wv.description}}</ion-select-option>
         </ion-select>
         <br><br>
-        <ion-select multiple="true" #werkschriftSelect placeholder="Werkvorschrift C5">
+        <ion-select multiple="true" placeholder="Werkvorschrift C5">
           <ion-select-option *ngFor="let wv of wvs" >{{wv.chapter}} {{wv.description}}</ion-select-option>
         </ion-select>
         <br><br>
-        <ion-select multiple="true" #werkschriftSelect placeholder="Werkvorschrift C6">
+        <ion-select multiple="true" placeholder="Werkvorschrift C6">
           <ion-select-option *ngFor="let wv of wvs" >{{wv.chapter}} {{wv.description}}</ion-select-option>
         </ion-select>
         <br><br>
-        <ion-select multiple="true" #werkschriftSelect placeholder="Werkvorschrift C7">
+        <ion-select multiple="true" placeholder="Werkvorschrift C7">
           <ion-select-option *ngFor="let wv of wvs" >{{wv.chapter}} {{wv.description}}</ion-select-option>
         </ion-select>
         <br><br>
-        <ion-select multiple="true" #werkschriftSelect placeholder="Werkvorschrift C8">
+        <ion-select multiple="true" placeholder="Werkvorschrift C8">
           <ion-select-option *ngFor="let wv of wvs" >{{wv.chapter}} {{wv.description}}</ion-select-option>
         </ion-select>
         <br><br>
-        <ion-select multiple="true" #werkschriftSelect placeholder="Werkvorschrift C10">
+        <ion-select multiple="true" placeholder="Werkvorschrift C10">
           <ion-select-option *ngFor="let wv of wvs" >{{wv.chapter}} {{wv.description}}</ion-select-option>
         </ion-select>
         <br><br>
-        <ion-select multiple="true" #werkschriftSelect placeholder="Werkvorschrift C12">
+        <ion-select multiple="true" placeholder="Werkvorschrift C12">
           <ion-select-option *ngFor="let wv of wvs" >{{wv.chapter}} {{wv.description}}</ion-select-option>
         </ion-select>
       </ion-col>
