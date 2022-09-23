@@ -8,7 +8,18 @@ import {NavController} from '@ionic/angular';
 })
 export class HomePage implements OnInit {
 
-  constructor() {}
+  constructor(private navCtrl: NavController) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
+
+  onLogIn() {
+    console.log('Log in');
+    this.navCtrl.navigateForward('/login');
+  }
+
+  onSignUp() {
+    console.log('Sign up');
+    this.navCtrl.navigateForward('/signup');
+  }
 }

@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { SignInComponent } from './sign-in/sign-in.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { MainComponent } from './sign-in/main/main.component';
+
 
 const routes: Routes = [
   {
@@ -15,28 +13,29 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'signIn',
+    path: 'login',
     children: [
       {
         path:'',
-        component: SignInComponent
+        loadChildren: () => import('./log-in/log-in.module').then((m) => m.LogInPageModule)
       },
       {
-        path: 'main',
-        component: MainComponent
+        path: 'login/main',
+        loadChildren: () => import('./log-in/main/main.module').then((m) => m.MainPageModule)
       }
     ]
   },
   {
-    path: 'signUp',
-    component: SignUpComponent
+    path: 'signup',
+    loadChildren: () => import('./sign-up/sign-up.module').then((m) => m.SignUpPageModule)
   },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
