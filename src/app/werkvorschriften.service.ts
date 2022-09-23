@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {Werkvorschrift} from './werkvorschriften.model';
+import { Injectable } from '@angular/core';
+import { Werkvorschrift } from './werkvorschriften.model';
 
 @Injectable({
   providedIn: 'root'
@@ -24,13 +24,9 @@ export class WerkvorschriftenService {
     }
   ];
 
+  constructor() {}
+
   getWerkvorschriften() {
     return [...this.werkvorschriftC1];
   }
-
-  // eslint-disable-next-line @typescript-eslint/member-ordering
-  constructor() {}
-}
-
-export class werkvorschriftService {
 }
